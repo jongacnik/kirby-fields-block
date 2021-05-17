@@ -1,0 +1,15 @@
+.k-block-fields-preview {
+  margin: -0.75rem;
+}
+
+.k-block-fields-preview .k-block-title {
+  padding: 0.75rem;
+  background: #f7f7f7;
+  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid rgb(229,229,229);
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.k-block-fields-preview .k-form {
+  padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+}
