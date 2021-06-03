@@ -6,3 +6,9 @@
 
 # Composer files
 /vendor
+
+# Yarn
+yarn.lock
+
+# Parcel
+.cache

@@ -44,6 +44,10 @@ blockname:
   <img src="https://files.jongacnik.com/kirby-fields-preview-2.png" width="975" height="auto" />
 </details>
 
+### Collapse/Expand block
+
+You can collapse or expand the block preview by double clicking the block title bar.
+
 ## Notes
 
 - The block `icon` will appear in the title bar.

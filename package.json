@@ -1,0 +1,24 @@
+{
+  "name": "kirby-fields-block",
+  "version": "1.1.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/jongacnik/kirby-fields-block.git",
+  "author": "jongacnik <jon@folderstudio.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.2.0",
+    "parcel-bundler": "^1.12.5",
+    "vue-template-compiler": "^2.6.13"
+  },
+  "scripts": {
+    "dev": "parcel watch src/index.js --no-source-maps -d ./",
+    "build": "parcel build src/index.js --no-source-maps --experimental-scope-hoisting -d ./"
+  },
+  "dependencies": {
+    "vue": "^2.6.13",
+    "vue-hot-reload-api": "^2.3.4"
+  },
+  "posthtml": {
+    "recognizeSelfClosing": true
+  }
+}
