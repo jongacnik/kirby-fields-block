@@ -20,19 +20,23 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      isHidden: JSON.parse(sessionStorage.getItem(`kirby.fieldsBlock.${this.$attrs.endpoints.field}.${this.$attrs.id}`))
+      isHidden: JSON.parse(sessionStorage.getItem(`kirby.fieldsBlock.${this.$attrs.endpoints.field}.${this.$attrs.id}`)),
+      tagsNotPreventDblClick: ['input', 'textarea']
     }
   },
   methods: {
-    toggle () {
+    toggle() {
       this.isHidden = !this.isHidden
       sessionStorage.setItem(`kirby.fieldsBlock.${this.$attrs.endpoints.field}.${this.$attrs.id}`, this.isHidden)
     },
-    preventSelect (event) {
+    preventSelect(event) {
       if (event.detail > 1) {
-        event.preventDefault()
+        let tag = event.target.tagName.toLowerCase();
+        if (!this.tagsNotPreventDblClick.includes(tag)) {
+          event.preventDefault()
+        }
       }
     }
   }
@@ -50,7 +54,7 @@ export default {
 }
 
 .k-block-fields-preview .k-block-title.with-border {
-  border-bottom: 1px solid rgba(0,0,0,.1); 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .k-block-fields-preview .k-form {
@@ -76,6 +80,6 @@ export default {
 }
 
 .k-block-fields-preview .k-empty[data-layout="list"] .k-icon {
-  border-right: 1px solid rgba(0,0,0,.05) !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.05) !important;
 }
 </style>
