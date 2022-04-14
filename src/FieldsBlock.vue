@@ -32,7 +32,9 @@ export default {
     },
     preventSelect (event) {
       if (event.detail > 1) {
-        event.preventDefault()
+        if(!event.target.closest('.k-input')) {
+          event.preventDefault()
+        }
       }
     }
   }
@@ -50,7 +52,7 @@ export default {
 }
 
 .k-block-fields-preview .k-block-title.with-border {
-  border-bottom: 1px solid rgba(0,0,0,.1); 
+  border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 .k-block-fields-preview .k-form {
