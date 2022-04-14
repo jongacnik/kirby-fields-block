@@ -1,6 +1,6 @@
 {
   "name": "kirby-fields-block",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "src/index.js",
   "repository": "https://github.com/jongacnik/kirby-fields-block.git",
   "author": "jongacnik <jon@folderstudio.com>",
