@@ -20,10 +20,21 @@
 
 <script>
 export default {
+  props: {
+    hiddenByDefault: Boolean
+  },
   data () {
     return {
-      isHidden: JSON.parse(sessionStorage.getItem(`kirby.fieldsBlock.${this.$attrs.endpoints.field}.${this.$attrs.id}`))
+      isHidden: null
     }
+  },
+  created() {
+    //this value should come from (global) config
+    this.hiddenByDefault = true;
+
+    // Get Value of Hidden from LS and check if Value is set in LS, otherwise set to hiddenByDefault
+    const hiddenBySession = JSON.parse(sessionStorage.getItem(`kirby.fieldsBlock.${this.$attrs.endpoints.field}.${this.$attrs.id}`));
+    this.isHidden = (hiddenBySession !== null) ? hiddenBySession : this.hiddenByDefault;
   },
   methods: {
     toggle () {
