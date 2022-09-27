@@ -1,3 +1,3 @@
 <?php
 
-Kirby::plugin('jg/fields-block', []);
+Kirby::plugin('jongacnik/fields-block', []);
