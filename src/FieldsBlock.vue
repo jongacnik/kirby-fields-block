@@ -4,6 +4,7 @@
       :content="content"
       :fieldset="fieldset"
       v-if="fieldset.label === null || fieldset.label"
+      @dblclick="toggle"
       @toggle="toggle"
     />
     <k-form
