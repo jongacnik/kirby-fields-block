@@ -7,12 +7,12 @@
   "license": "MIT",
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.2.0",
-    "parcel-bundler": "^1.12.5",
+    "kirbyup": "latest",
     "vue-template-compiler": "^2.6.13"
   },
   "scripts": {
-    "dev": "parcel watch src/index.js --no-source-maps -d ./",
-    "build": "parcel build src/index.js --no-source-maps --experimental-scope-hoisting -d ./"
+    "dev": "kirbyup src/index.js --watch",
+    "build": "kirbyup src/index.js"
   },
   "dependencies": {
     "vue": "^2.6.13",

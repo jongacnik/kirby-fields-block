@@ -12,3 +12,4 @@ yarn.lock
 
 # Parcel
 .cache
+/.parcel-cache
