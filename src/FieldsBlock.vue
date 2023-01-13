@@ -1,11 +1,11 @@
 <template>
-  <div class="k-block-fields-preview" @mousedown="preventSelect">
-    <k-block-title
+  <div class="k-block-fields-preview" @mousedown="preventSelect" :data-hidden="isHidden">
+    <k-fields-block-title
       :content="content"
       :fieldset="fieldset"
-      @dblclick="toggle"
       v-if="fieldset.label === null || fieldset.label"
-      :class="{ 'with-border': !isHidden }"
+      @dblclick="toggle"
+      @toggle="toggle"
     />
     <k-form
       ref="form"
@@ -42,8 +42,26 @@ export default {
 </script>
 
 <style>
+
+.k-blocks:has(.k-block-fields-preview) {
+  background: none;
+  box-shadow: none;
+}
+
+.k-block-container:has(.k-block-fields-preview) {
+  border-bottom: none;
+  border-radius: var(--rounded-md);
+}
+
+.k-block-container:has(.k-block-fields-preview):not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
 .k-block-fields-preview {
   margin: -0.75rem;
+  overflow: hidden;
+  border-radius: var(--rounded-md);
+  box-shadow: var(--shadow);
 }
 
 .k-block-fields-preview .k-block-title {
@@ -51,8 +69,17 @@ export default {
   background: #f7f7f7;
 }
 
-.k-block-fields-preview .k-block-title.with-border {
+.k-block-fields-preview:not([data-hidden="true"]) .k-block-title {
   border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.k-block-fields-preview .k-fields-block-toggle {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.k-block-fields-preview[data-hidden="true"] .k-fields-block-toggle {
+  transform: scaleY(-1);
 }
 
 .k-block-fields-preview .k-form {
