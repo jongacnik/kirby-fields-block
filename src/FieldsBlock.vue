@@ -53,6 +53,9 @@ export default {
   border-radius: var(--rounded-md);
 }
 
+.k-block-container:has(.k-block-fields-preview):not(:first-of-type) {
+  margin-top: 0.5rem;
+}
 .k-block-container:has(.k-block-fields-preview):not(:last-of-type) {
   margin-bottom: 0.5rem;
 }
