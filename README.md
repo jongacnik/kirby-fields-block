@@ -46,7 +46,7 @@ blockname:
 
 ### Collapse/Expand block
 
-You can collapse or expand the block preview by double clicking the block title bar.
+You can collapse or expand the block preview by clicking on the arrow icon or double clicking the block title bar.
 
 ## Notes
 
