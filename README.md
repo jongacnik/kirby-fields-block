@@ -2,7 +2,7 @@
 
 Kirby [block preview](https://getkirby.com/docs/reference/plugins/extensions/blocks) plugin to directly render block fields, allowing for inline editing.
 
-<img src="https://files.jongacnik.com/kirby-fields-preview-1.png" width="975" height="auto" />
+<img src="https://user-images.githubusercontent.com/7975568/213155996-631f9ee2-54dd-48ca-9318-fa3285f56098.png" width="975" height="auto" />
 
 ## Usage
 
@@ -41,7 +41,7 @@ blockname:
 
 <details>
   <summary>Example</summary>
-  <img src="https://files.jongacnik.com/kirby-fields-preview-2.png" width="975" height="auto" />
+  <img src="https://user-images.githubusercontent.com/7975568/213156383-26594bba-5b5d-4f44-8efd-e2b50553e500.png" width="975" height="auto" />
 </details>
 
 ### Collapse/Expand block
