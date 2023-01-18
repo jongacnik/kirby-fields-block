@@ -1,5 +1,5 @@
 <template>
-  <div class="k-block-fields-preview" @mousedown="preventSelect" :data-hidden="isHidden">
+  <div class="k-block-fields-preview" @mousedown="preventSelect" :data-collapsed="isCollapsed">
     <k-fields-block-title
       :content="content"
       :fieldset="fieldset"
@@ -13,7 +13,7 @@
       :fields="fieldset.tabs.content.fields"
       :value="$helper.clone(content)"
       @input="$emit('update', $event)"
-      v-if="!isHidden"
+      v-if="!isCollapsed"
     />
   </div>
 </template>
@@ -22,13 +22,16 @@
 export default {
   data () {
     return {
-      isHidden: JSON.parse(sessionStorage.getItem(`kirby.fieldsBlock.${this.$attrs.endpoints.field}.${this.$attrs.id}`))
+      isCollapsed: JSON.parse(sessionStorage.getItem(`kirby.fieldsBlock.${this.$attrs.endpoints.field}.${this.$attrs.id}`))
     }
+  },
+  created () {
+    console.log(this.collapse);
   },
   methods: {
     toggle () {
-      this.isHidden = !this.isHidden
-      sessionStorage.setItem(`kirby.fieldsBlock.${this.$attrs.endpoints.field}.${this.$attrs.id}`, this.isHidden)
+      this.isCollapsed = !this.isCollapsed
+      sessionStorage.setItem(`kirby.fieldsBlock.${this.$attrs.endpoints.field}.${this.$attrs.id}`, this.isCollapsed)
     },
     preventSelect (event) {
       if (event.detail > 1) {
@@ -72,7 +75,7 @@ export default {
   background: #f7f7f7;
 }
 
-.k-block-fields-preview:not([data-hidden="true"]) .k-block-title {
+.k-block-fields-preview:not([data-collapsed="true"]) .k-block-title {
   border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
@@ -81,7 +84,7 @@ export default {
   cursor: pointer;
 }
 
-.k-block-fields-preview[data-hidden="true"] .k-fields-block-toggle {
+.k-block-fields-preview[data-collapsed="true"] .k-fields-block-toggle {
   transform: scaleY(-1);
 }
 
