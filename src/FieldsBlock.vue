@@ -42,26 +42,10 @@ export default {
 </script>
 
 <style>
-
-.k-blocks:has(.k-block-fields-preview) {
-  background: none;
-  box-shadow: none;
-}
-
-.k-block-container:has(.k-block-fields-preview) {
-  border-bottom: none;
-  border-radius: var(--rounded-md);
-}
-
-.k-block-container:has(.k-block-fields-preview):not(:last-of-type) {
-  margin-bottom: 0.5rem;
-}
-
 .k-block-fields-preview {
   margin: -0.75rem;
   overflow: hidden;
-  border-radius: var(--rounded-md);
-  box-shadow: var(--shadow);
+  border-radius: var(--rounded);
 }
 
 .k-block-fields-preview .k-block-title {
