@@ -6,19 +6,10 @@
   "author": "jongacnik <jon@folderstudio.com>",
   "license": "MIT",
   "devDependencies": {
-    "@vue/component-compiler-utils": "^3.2.0",
-    "kirbyup": "latest",
-    "vue-template-compiler": "^2.6.13"
+    "kirbyup": "latest"
   },
   "scripts": {
     "dev": "kirbyup src/index.js --watch",
     "build": "kirbyup src/index.js"
-  },
-  "dependencies": {
-    "vue": "^2.6.13",
-    "vue-hot-reload-api": "^2.3.4"
-  },
-  "posthtml": {
-    "recognizeSelfClosing": true
   }
 }
