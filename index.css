@@ -1,7 +1,6 @@
 
 .k-block-fields-preview {
   margin: -0.75rem;
-  overflow: hidden;
   border-radius: var(--rounded);
 }
 .k-block-fields-preview .k-block-title {
